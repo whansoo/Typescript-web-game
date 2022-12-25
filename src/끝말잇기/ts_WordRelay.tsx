@@ -1,5 +1,22 @@
 import React, { useCallback, useState } from "react";
 import { useRef } from "react";
+import styled from "styled-components";
+
+const Wrap = styled.main`
+  flex-direction: column;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 100vw;
+  height: 100%;
+  min-height: 600px;
+  max-width: 460px;
+  max-height: 896px;
+  background-color: #F0EBE1;
+`;
 
 const WordRelay = () => {
   const [word, setWord] = useState('선풍기');
@@ -32,7 +49,7 @@ const WordRelay = () => {
   }, [])
 console.log(value)
   return (
-    <>
+    <Wrap>
       <div>{word}</div>
       <form onSubmit={onSubmitForm}>
         <input
@@ -43,7 +60,7 @@ console.log(value)
         <button>입력!</button>
       </form>
       <div>{result}</div>
-    </>
+    </Wrap>
   );
 };
 

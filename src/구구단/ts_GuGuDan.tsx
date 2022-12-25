@@ -1,6 +1,22 @@
 import React, { useState } from "react"
 import { useRef } from "react"
+import styled from "styled-components";
 
+const Wrap = styled.main`
+  flex-direction: column;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 100vw;
+  height: 100%;
+  min-height: 600px;
+  max-width: 460px;
+  max-height: 896px;
+  background-color: #F0EBE1;
+`;
 
 const GuGuDan2 = () => {
 
@@ -38,7 +54,7 @@ const GuGuDan2 = () => {
     }
 
     return(
-        <>
+        <Wrap>
           <div>{first} 곱하기 {second}는?</div>
           <form onSubmit={onSubmit}>
             <input ref={inputEl} type="number" value={value} onChange={(e) => setValue(e.target.value)}/>
@@ -47,7 +63,7 @@ const GuGuDan2 = () => {
          <div>{result}</div>
           <button onClick={onClick}>정답보기</button>
           <div>{total}</div>
-        </>
+        </Wrap>
       )
 
 }
