@@ -1,6 +1,7 @@
-import React, {useRef, useState, useCallback} from 'react';
-import Try from "./Try";
+import React, {useRef, useState, useCallback, ReactText} from 'react';
+import Try from './Try';
 import styled from 'styled-components';
+import { TryInfo } from './types';
 
 const Wrap = styled.main`
   flex-direction: column;
@@ -32,10 +33,10 @@ const NumberBaseball = () => {
   const [answer, setAnswer] = useState(getNumbers); //ex) [2,4,6,8] lazy init getNumbers()은 렌더링 될때마다 함수를 호출한다 따라서 한번만 호출하려고 하면 getNumbers만 작성 그러면 첨에 return값만 렌더링 된다.
   const [value, setValue] = useState('');
   const [result, setResult] = useState('');
-  const [tries, setTries] = useState([]);
-  const inputEl = useRef(null);
+  const [tries, setTries] = useState<TryInfo[]>([]);
+  const inputEl = useRef<HTMLInputElement>(null);
 
-  const onSubmitForm = useCallback((e) => {
+  const onSubmitForm = useCallback<(e: React.FormEvent) => void>((e) => {
     e.preventDefault();
     if (value === answer.join('')) {
       setTries((t) => ([
@@ -50,7 +51,9 @@ const NumberBaseball = () => {
       setValue('');
       setAnswer(getNumbers());
       setTries([]);
-      inputEl.current.focus();
+      if(inputEl.current) {
+        inputEl.current.focus();
+      }
     } else {
       const answerArray = value.split('').map((v) => parseInt(v));
       let strike = 0;
@@ -61,7 +64,9 @@ const NumberBaseball = () => {
         setValue('');
         setAnswer(getNumbers());
         setTries([]);
-        inputEl.current.focus();
+        if(inputEl.current) {
+            inputEl.current.focus();
+          }
       } else {
         console.log('답은', answer.join(''));
         for (let i = 0; i < 4; i += 1) {
@@ -81,12 +86,14 @@ const NumberBaseball = () => {
           }
         ]));
         setValue('');
-        inputEl.current.focus();
+        if(inputEl.current) {
+            inputEl.current.focus();
+          }
       }
     }
   }, [value, answer]);
 
-  const onChangeInput = useCallback((e) => setValue(e.target.value), []);
+  const onChangeInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value), []);
 
   return (
     <Wrap>
