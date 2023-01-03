@@ -82,11 +82,12 @@ cursor: pointer;
 const GameList = () => {
    return (
      <Wrap>
-      <ImgWrap src={Image}/>
+      {/* <ImgWrap src={Image}/> */}
       <Foot/>
     <Link to={"/gugudan"}><StyledButton>구구단</StyledButton></Link>
     <Link to={"/relay"}><StyledButton>끝말잇기</StyledButton></Link>
     <Link to={"/baseball"}><StyledButton>숫자야구</StyledButton></Link> 
+    <Link to={"/response"}><StyledButton>반응속도체크</StyledButton></Link> 
     </Wrap>
    )
 

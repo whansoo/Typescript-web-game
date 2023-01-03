@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+/*반응속도체크 css*/
+#screen {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  user-select: none;
+}
+#screen.waiting {
+  background-color: aqua;
+}
+#screen.ready {
+  background-color: red;
+  color: white;
+}
+#screen.now {
+  background-color: greenyellow;
+}

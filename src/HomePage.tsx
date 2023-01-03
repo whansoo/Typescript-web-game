@@ -84,13 +84,7 @@ const HomePage = () => {
      <Wrap>
       <ImgWrap src={Image}/>
       <Foot/>
-    {/* <Link to={"/gugudan"}><StyledButton>구구단</StyledButton></Link>
-    <Link to={"/relay"}><StyledButton>끝말잇기</StyledButton></Link>
-    <Link to={"/baseball"}><StyledButton>숫자야구</StyledButton></Link> */}
-      
        <Link to={"/gamelist"}><Button>게임 시작</Button></Link>
-   
-    
     </Wrap>
    )
 

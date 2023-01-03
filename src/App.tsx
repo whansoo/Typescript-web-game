@@ -5,7 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import GuGuDan2 from './구구단/ts_GuGuDan';
 import WordRelay from './끝말잇기/ts_WordRelay';
-import NumberBaseball from './숫자야구/NumberBaseball';
+import NumberBaseball from './숫자야구/ts_NumberBaseball';
+import ResponseCheck from './반응속도체크/ts_ResponseCheck';
 import GameList from './GameList';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
        <Route path='/gugudan' element={<GuGuDan2/>}/>
        <Route path='/relay' element={<WordRelay/>}/>
        <Route path='/baseball' element={<NumberBaseball/>}/>
+       <Route path='/response' element={<ResponseCheck/>}/>
      </Routes>
     </BrowserRouter>
     </>
