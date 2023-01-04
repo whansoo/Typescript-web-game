@@ -57,14 +57,16 @@ const ResponseCheck = () => {
 
   return (
     <>
+     <div id="screencontainger">
       <div
         id="screen"
         className={state}
         onClick={onClickScreen}
       >
-        {message}
+        <div id="message">{message}</div>
       </div>
-      {renderAverage()}
+      <div id="average">{renderAverage()}</div>
+      </div>
     </>
   );
 };
