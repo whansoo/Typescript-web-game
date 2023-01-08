@@ -88,6 +88,7 @@ const GameList = () => {
     <Link to={"/baseball"}><StyledButton>숫자야구</StyledButton></Link> 
     <Link to={"/response"}><StyledButton>반응속도체크</StyledButton></Link> 
     <Link to={"/rsp"}><StyledButton>가위바위보</StyledButton></Link> 
+    <Link to={"/lotto"}><StyledButton>로또뽑기</StyledButton></Link> 
     </Wrap>
    )
 

@@ -8,6 +8,7 @@ import WordRelay from './끝말잇기/ts_WordRelay';
 import NumberBaseball from './숫자야구/ts_NumberBaseball';
 import ResponseCheck from './반응속도체크/ts_ResponseCheck';
 import RSP from './가위바위보/ts_RSP';
+import Lotto from './로또/ts_Lotto';
 import GameList from './GameList';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
        <Route path='/baseball' element={<NumberBaseball/>}/>
        <Route path='/response' element={<ResponseCheck/>}/>
        <Route path='/rsp' element={<RSP/>}/>
+       <Route path='/lotto' element={<Lotto/>}/>
      </Routes>
     </BrowserRouter>
     </>
