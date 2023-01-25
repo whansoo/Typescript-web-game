@@ -8,10 +8,9 @@ const Center = styled.div`
 `
 
 const StyledButton = styled.button`
-  background-color: #228be6;
-  color: #ffffff;
-  border: none;
-  border-radius: 20px;
+  color: #000;
+  border: 1px solid aqua;
+  border-radius: 30px;
   padding: 15px;
   width: 50%;
   margin: 20px auto;
@@ -22,6 +21,7 @@ const StyledButton = styled.button`
 const Title = styled.h1`
   text-align: center;
   margin-top: 90px;
+  color: aqua;
 `
 const Wrap = styled.main`
   flex-direction: column;
@@ -44,7 +44,7 @@ const Wrap = styled.main`
 const GameList = () => {
    return (
      <Wrap>
-        <Title>게임 선택 하기</Title>
+        <Title>Choose a game!!</Title>
       <Center>
     <Link to={"/gugudan"}><StyledButton>구구단</StyledButton></Link>
     <Link to={"/relay"}><StyledButton>끝말잇기</StyledButton></Link>

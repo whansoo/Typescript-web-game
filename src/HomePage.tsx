@@ -2,6 +2,26 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Image from "./img/main.webp";
 
+const Maintitle = styled.h1`
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: aqua;
+
+`
+const Subtitle = styled.span`
+  position: absolute;
+  top: 700px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: aqua;
+
+`
 const StyledButton = styled.button`
   background-color: #228be6;
   color: #ffffff;
@@ -82,8 +102,10 @@ const HomePage = () => {
    return (
      <Wrap>
       <ImgWrap src={Image}/>
+      <Maintitle>모두의 희망 Web Game!</Maintitle>
       <Foot/>
-       <Link to={"/gamelist"}><Button>게임 시작</Button></Link>
+       <Link to={"/gamelist"}><Button>Game Start!</Button></Link>
+       <Subtitle>이 게임은 typescript로 만들어 졌습니다.<br/> 디자인은 계속 해서 수정/추가 할 예정입니다.</Subtitle>
     </Wrap>
    )
 
