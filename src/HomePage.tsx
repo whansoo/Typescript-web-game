@@ -35,11 +35,10 @@ const ImgWrap = styled.img`
     box-sizing: border-box;
     padding: 0;
     border: none;
-    /* margin: auto; */
     display: block;
     width: 0;
     height: 0;
-     min-width: 100%;
+    min-width: 100%;
     max-width: 100%;
     min-height: 70%;
     max-height: 50%; 
